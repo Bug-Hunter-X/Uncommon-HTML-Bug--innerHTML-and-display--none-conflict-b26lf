@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text should be visible.
+  </div>
+
+  <script>
+    // Correct way to modify visibility before or after changing content
+    document.getElementById("myDiv").style.display = "none";
+    document.getElementById("myDiv").innerHTML = "New content"; // Or leave as is
+    // Alternatively, control visibility with CSS classes
+    // document.getElementById("myDiv").classList.add("hidden");
+  </script>
+  <style>
+    .hidden {
+      display: none;
+    }
+  </style>
+</body>
+</html>
