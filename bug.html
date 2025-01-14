@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text should be visible.
+  </div>
+
+  <script>
+    // Incorrectly using innerHTML to modify the visibility of an element
+    document.getElementById("myDiv").innerHTML = ""; //This will remove content
+    document.getElementById("myDiv").style.display = "none"; // This won't work after innerHTML
+  </script>
+</body>
+</html>
